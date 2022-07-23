@@ -2,23 +2,24 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    colors: {
-      pink: "#FB2E86",
-      red: "#FB2E86",
-      blue: "#FB2E86",
-      OffNavyBlue: "#FB2E86",
-      navyblue: "#FB2E86",
-      skyBlue: "#FB2E86",
-      pantonePurple: "#FB2E86",
-      purple: "#FB2E86",
-      offPurple: "#FB2E86",
-      offBlue: "#FB2E86",
+    extend: {
+      colors: {
+        pink: "#FB2E86",
+        red: "#FB2448",
+        blue: "#2F1AC4",
+        OffNavyBlue: "#3F509E",
+        navyblue: "#151875",
+        skyBlue: "rgba(243, 249, 255, 1)",
+        pantonePurple: "#E0D3F5",
+        purple: "#7E33E0",
+        offPurple: "#9F63B5",
+        offBlue: "#151875",
+      },
+      fontFamily: {
+        lato: ["Lato", "sans-serif"],
+        josefin: ["Josefin Sans", "sans-serif"],
+      },
     },
-    fontFamily: {
-      lato: ["Lato", "sans-serif"],
-      josefin: ["Josefin Sans", "sans-serif"],
-    },
-    extend: {},
   },
   plugins: [],
 };
