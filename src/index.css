@@ -3,3 +3,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Featured Product*/
+
+/* Dots */
+
+.slick-dots li {
+  @apply w-4 h-1 bg-featuredDots rounded-lg mr-2;
+}
+
+/* Custom Slick Dots */
+.ft-slick__dots--custom {
+  @apply w-4 h-1 bg-featuredDots rounded-lg;
+}
+
+.slick-dots .slick-active .ft-slick__dots--custom {
+  @apply w-6 h-1 bg-red;
+}
+
+.product-slider-featured {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-slider-featured-span {
+  @apply text-navyblue text-base my-1;
+}
+
+.product-slider-featured:hover {
+  @apply bg-blue;
+}
+.product-slider-featured:hover .product-slider-featured-span,
+.product-slider-featured:hover h2 {
+  @apply text-white;
+}
+
+.product-slider-featured:not(:hover) .product-slider-featured-menu,
+.product-slider-featured:not(:hover) .product-slider-featured-details-btn {
+  display: none;
+}
+
+.product-slider-featured-details-btn {
+  @apply w-28 h-8 bg-featuredDetails text-white text-sm cursor-pointer font-josefin rounded-sm;
+}
+
+.product-slider-featured:hover .product-slider-featured-menu {
+  @apply flex flex-row justify-between absolute top-1 left-1;
+}
+
+.product-slider-featured-menu-item {
+  @apply rounded-full hover:bg-featuredCard grid place-items-center h-8 w-8;
+}

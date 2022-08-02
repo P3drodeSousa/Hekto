@@ -14,6 +14,11 @@ module.exports = {
         purple: "#7E33E0",
         offPurple: "#9F63B5",
         offBlue: "#151875",
+        gray: "#F6F7FB",
+        offGreen: "#05E6B7",
+        featuredCard: "#EEEFFB",
+        featuredDetails: "#08D15F",
+        featuredDots: "#FEBAD7",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
