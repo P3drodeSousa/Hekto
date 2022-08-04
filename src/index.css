@@ -165,3 +165,21 @@ button.active {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
+/* Trending Producs  */
+.trending-showcase {
+  margin-bottom: 200px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.trending-showcase-container {
+  height: 350px;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  filter: drop-shadow(0px 8px 40px rgba(49, 32, 138, 0.05));
+}
+
+.showcase-box {
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}

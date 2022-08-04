@@ -23,6 +23,8 @@ module.exports = {
         shonex: "rgba(26, 11, 91, 0.3);",
         trending: "#F1F0FF",
         trendingParagraph: "#ACABC3",
+        trendingshowcase: "#F5F6F8",
+        trendingShowcaseBox: "#FFF6FB;",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
