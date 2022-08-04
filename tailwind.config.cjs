@@ -19,6 +19,10 @@ module.exports = {
         featuredCard: "#EEEFFB",
         featuredDetails: "#08D15F",
         featuredDots: "#FEBAD7",
+        linearBg: "#F7F7F7",
+        shonex: "rgba(26, 11, 91, 0.3);",
+        trending: "#F1F0FF",
+        trendingParagraph: "#ACABC3",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],

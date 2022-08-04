@@ -53,3 +53,115 @@
 .product-slider-featured-menu-item {
   @apply rounded-full hover:bg-featuredCard grid place-items-center h-8 w-8;
 }
+
+/* Products Featured Tabs */
+
+.tabs {
+  max-width: 768px;
+  min-height: auto;
+  margin: 0 auto;
+}
+.tabs-nav {
+  display: flex;
+  height: 30px;
+  margin-bottom: 3px;
+}
+
+.tabs-nav > *:not(:last-child) {
+  margin-right: 3px;
+}
+
+.tabs-nav > button {
+  padding: 5px 20px;
+  font-size: 14px;
+}
+
+button.active {
+  font-weight: bold;
+}
+
+.tabs-body {
+  padding: 20px;
+  box-shadow: 0 0 1px #222;
+}
+
+.latest-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 30px;
+  row-gap: 75px;
+}
+
+.latest-tabs-product {
+  border-bottom: 2px solid #eeeffb;
+  transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+}
+
+.latest-product-hover {
+  display: none;
+}
+
+.latest-product:hover .latest-product-hover {
+  display: block;
+}
+
+.latest-product:hover .latest-product-hover svg {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+/* Shopex */
+
+.shopex {
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.shopex div {
+  @apply flex flex-col items-center justify-center;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}
+
+/* Trending */
+
+.trending {
+  height: 579px;
+}
+
+.full-bleed {
+  box-shadow: 0 0 0 100vmax #f1f0ff;
+  clip-path: inset(0 -100vmax);
+}
+
+.trending-paragraph {
+  @apply font-lato font-medium text-trendingParagraph leading-5 tracking-wide mb-4 ml-8;
+  text-indent: -45px;
+}
+
+.trending p.trending-paragraph:before {
+  content: "\A";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 17px;
+}
+
+.trending p:first-of-type:before {
+  @apply bg-red;
+}
+
+.trending p:nth-of-type(2):before {
+  background: #2b2bf5;
+}
+
+.trending p:last-of-type:before {
+  background: #2bf5cc;
+}
+
+.trending-sofa {
+  background-image: url("./assets/trending/blob.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
