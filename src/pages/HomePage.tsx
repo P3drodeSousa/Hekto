@@ -1,11 +1,12 @@
 import HeaderComponent from "../components/Layout/Header";
 import SubHeaderComponent from "../components/Layout/SubHeader";
-import PromotionalImg from "../assets/promotional.png";
+
 import FeaturedProducts from "../components/Products/Featured";
 import LatestProducts from "../components/Products/Latest";
 import Shopex from "../components/Home/Shopex";
 import Trending from "../components/Home/Trending";
 import TrendingProducts from "../components/Products/Trending";
+import HomeSlider from "../components/Home/Slider";
 
 // TODO ADD SLIDER
 
@@ -14,10 +15,7 @@ function HomePage() {
     <div className="min-h-screen w-screen">
       <SubHeaderComponent />
       <HeaderComponent />
-      <section>
-        <img src={PromotionalImg} />
-        Sherlock
-      </section>
+      <HomeSlider />
       <FeaturedProducts />
       <LatestProducts />
       <Shopex />

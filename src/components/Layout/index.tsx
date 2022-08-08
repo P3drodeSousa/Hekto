@@ -6,7 +6,11 @@ type Props = {
 };
 
 const LayoutComponent = ({ children }: Props) => {
-  return <section className="max-w-7xl w-full mx-auto ">{children}</section>;
+  return (
+    <section className="max-w-7xl w-full mx-auto px-4 md:p-0">
+      {children}
+    </section>
+  );
 };
 
 export default LayoutComponent;

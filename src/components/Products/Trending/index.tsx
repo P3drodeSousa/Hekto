@@ -17,7 +17,7 @@ function TrendingProducts({}: Props) {
         <Box color="trendingShowcaseBox" />
         <Box color="featuredCard" />
 
-        <div className=" flex-1 flex flex-col gap-5 showcase-box">
+        <div className=" flex-1 flex flex-col gap-5">
           <div className="flex-1 flex gap-3">
             <div className="bg-trendingshowcase w-28 grid place-items-center">
               Image

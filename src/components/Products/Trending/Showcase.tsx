@@ -3,6 +3,7 @@ import chair from "../../../assets/trendingProducts/cair.png";
 import Price from "../../utils/Price";
 import ProductTitle from "../../utils/ProductTitle";
 import Reduction from "../../utils/Reduction";
+
 const TrendingShowcase = (props: Props) => {
   return (
     <div className="trending-showcase">

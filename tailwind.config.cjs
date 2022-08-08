@@ -3,6 +3,12 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      height: {
+        homeSlider: "764px",
+      },
+      leading: {
+        homeSlider: "82px",
+      },
       colors: {
         pink: "#FB2E86",
         red: "#FB2448",
@@ -24,7 +30,8 @@ module.exports = {
         trending: "#F1F0FF",
         trendingParagraph: "#ACABC3",
         trendingshowcase: "#F5F6F8",
-        trendingShowcaseBox: "#FFF6FB;",
+        trendingShowcaseBox: "#FFF6FB",
+        homeSliderPara: "#8A8FB9",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],

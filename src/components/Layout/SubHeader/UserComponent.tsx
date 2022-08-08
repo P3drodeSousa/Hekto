@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 type Props = {};
 
+//TODO ADD ANIMATED ITEMS - CENTER ITEMS
+
 const UserComponent = (props: Props) => {
   return (
     <div className="flex item-center">

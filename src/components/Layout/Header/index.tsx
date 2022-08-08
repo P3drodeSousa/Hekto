@@ -1,10 +1,19 @@
+import { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import Mobile from "./Mobile";
 import SearchComponent from "./Search";
 
+const links: string[] = ["Home", "Shop", "Contact"];
+
 const HeaderComponent = () => {
-  const links: string[] = ["Home", "Shop", "Contact"];
+  const menuRef = useRef(null);
+
+  const handleOpenMenu = useCallback(() => {
+    menuRef.current.openMenu();
+  }, []);
+
   return (
-    <header className="h-20 flex items-center justify-between max-w-7xl  w-full   mx-auto ">
+    <header className="h-20 flex items-center md:p-0 p-2 justify-between max-w-7xl w-full mx-auto ">
       <Link to="/">
         <svg
           width="94"
@@ -20,16 +29,28 @@ const HeaderComponent = () => {
         </svg>
       </Link>
 
-      <nav>
+      <div className="space-y-2 block lg:hidden" onClick={handleOpenMenu}>
+        <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+        <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+        <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+      </div>
+
+      <Mobile ref={menuRef} menus={links} />
+
+      <nav className="lg:block hidden">
         {links.map((link) => {
           return (
-            <Link to={link} className="mr-6 font-lato text-base">
+            <Link
+              to={link}
+              className="mr-6 font-lato text-base hover:text-pink"
+            >
               {link}
             </Link>
           );
         })}
       </nav>
-      <SearchComponent />
+
+      {/* <SearchComponent /> */}
     </header>
   );
 };

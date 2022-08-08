@@ -4,7 +4,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Featured Product*/
+/* Sub Header */
+.full-bleed-header {
+  box-shadow: 0 0 0 100vmax rgb(126 51 224);
+  clip-path: inset(0 -100vmax);
+}
+
+/* Home slider  */
+.home-slider {
+  background: url(./assets/homeslider/Group129.png);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-slider .promo {
+  position: absolute;
+  width: 136px;
+  height: 138px;
+  right: 45px;
+  top: 100px;
+
+  background: url(./assets/homeslider/promo.png);
+  background-repeat: no-repeat;
+}
+/* Custom dots Home Slider  */
+.home-slider .slick-dots {
+  @apply absolute bottom-14;
+}
+
+.home-slider .slick-dots li {
+  width: 10px;
+  height: 9.89px;
+  background: transparent;
+  transform: rotate(-45deg);
+  border-radius: 0;
+}
+
+.home-slider-custom {
+  @apply w-3 h-3  border-solid border-2 border-red;
+}
+
+.home-slider .slick-dots .slick-active .home-slider-custom {
+  @apply w-3 h-3 bg-red;
+}
 
 /* Dots */
 
