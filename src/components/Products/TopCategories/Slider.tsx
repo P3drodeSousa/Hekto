@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slide from "./Slide";
-import { sliderSettings } from "../../utils/sliderSettings";
 
 type Props = {};
 
@@ -51,16 +50,58 @@ const slides = [
   },
 ];
 
-const FeaturedSlider = (props: Props) => {
+const sliderSettings = {
+  dots: true,
+  autoplay: false,
+  autoplaySpeed: 5000,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 0,
+  speed: 500,
+  arrows: false,
+  adaptiveHeight: true,
+  appendDots: (dots: boolean | undefined) => <ul>{dots}</ul>,
+  customPaging: (i: number) => <div className="home-slider-custom"></div>,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+  ],
+};
+
+const CategoriesSlider = (props: Props) => {
   return (
     <div className="relative">
-      <Slider {...sliderSettings}>
+      <Slider {...sliderSettings} className="top-categories-slider">
         {slides.map((slide, index) => {
-          return <Slide key={index} img={slide.img} />;
+          return <Slide key={slide.img} />;
         })}
       </Slider>
     </div>
   );
 };
 
-export default FeaturedSlider;
+export default CategoriesSlider;

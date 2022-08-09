@@ -1,7 +1,6 @@
 import LayoutComponent from "../../Layout";
 import Title from "../../utils/Title";
 import FeaturedTabs from "./FeaturedTabs";
-import ProductList from "./ProductList";
 
 type Props = {};
 
@@ -10,7 +9,6 @@ const LatestProducts = (props: Props) => {
     <LayoutComponent>
       <Title title="Latest Products" />
       <FeaturedTabs />
-      <ProductList />
     </LayoutComponent>
   );
 };

@@ -1,8 +1,10 @@
 import exampleChair from "../../../assets/chair2.png";
 
-type Props = {};
+type Props = {
+  product: string;
+};
 
-const LatestProduct = (props: Props) => {
+const LatestProduct = ({ product }: Props) => {
   return (
     <div className="h-80 latest-product flex flex-col">
       <div className="bg-linearBg hover:bg-white  cursor-pointer flex-1">
@@ -47,7 +49,8 @@ const LatestProduct = (props: Props) => {
 
       <div className="flex justify-between mt-4 items-center">
         <h2 className="font-josefin text-base text-navyblue latest-tabs-product font-semibold">
-          Confort Handy Craft
+          {product}
+          {/* Confort Handy Craft */}
         </h2>
         <div className="flex">
           <span className="font-josefin text-sm text-navyblue mr-2 font-semibold">

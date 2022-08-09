@@ -2,9 +2,13 @@ import Button from "../../utils/Button";
 import homeslider from "../../../assets/homeslider/homeslider.png";
 import promoSofa from "../../../assets/homeslider/promo_sofa.png";
 
+import { faker } from "@faker-js/faker";
+
 type Props = {
   color: string;
 };
+
+const randomName = faker.name.findName();
 
 const Slide = ({ color }: Props) => {
   return (
@@ -33,7 +37,7 @@ const Slide = ({ color }: Props) => {
       <div className="h-full grid place-items-center flex-1 home-slider relative">
         <img src={promoSofa} alt="" />
         <div className="promo grid place-items-center">
-          <span className="font-josefin text-4xl text-white font-bold p-4 text-center">
+          <span className="font-josefin text-4xl text-white  p-4 text-center">
             50% off
           </span>
         </div>

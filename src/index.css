@@ -64,6 +64,8 @@
   @apply w-6 h-1 bg-red;
 }
 
+/* Product Featured Slider */
+
 .product-slider-featured {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
@@ -97,35 +99,18 @@
   @apply rounded-full hover:bg-featuredCard grid place-items-center h-8 w-8;
 }
 
-/* Products Featured Tabs */
+/* Products Latest Tabs */
 
-.tabs {
-  max-width: 768px;
-  min-height: auto;
-  margin: 0 auto;
-}
-.tabs-nav {
-  display: flex;
-  height: 30px;
-  margin-bottom: 3px;
+.latest-tabs .tabs-nav > *:not(:last-child) {
+  margin-right: 50px;
 }
 
-.tabs-nav > *:not(:last-child) {
-  margin-right: 3px;
+.latest-tabs .tabs-nav > button {
+  @apply font-lato text-sm text-navyblue font-bold leading-5;
 }
 
-.tabs-nav > button {
-  padding: 5px 20px;
-  font-size: 14px;
-}
-
-button.active {
-  font-weight: bold;
-}
-
-.tabs-body {
-  padding: 20px;
-  box-shadow: 0 0 1px #222;
+.latest-tabs button.active {
+  @apply text-pink underline underline-offset-4;
 }
 
 .latest-grid {
@@ -226,3 +211,60 @@ button.active {
 .showcase-box {
   box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
 }
+
+/* Top Categories */
+
+.top-categories-container {
+  display: grid;
+  gap: 30px;
+  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.top-categories-product-background,
+.top-categories-product-foreground {
+  @apply h-72 w-full grid place-items-center rounded-full;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}
+
+.top-categories-product-foreground {
+  @apply bg-gray z-10;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.top-categories-product-background {
+  @apply -z-10 absolute top-0 left-0;
+  background: #9877e7;
+}
+
+.top-categories-container:hover .top-categories-product-foreground {
+  transform: translate(5px, -5px);
+}
+
+.top-categories-product-foreground:not(:hover) .top-categories-details-btn {
+  display: none;
+}
+
+.top-categories-product-foreground .top-categories-details-btn {
+  @apply w-28 h-8 bg-featuredDetails text-white text-sm cursor-pointer font-josefin rounded-sm;
+}
+
+/* Custom dots Home Slider  */
+.top-categories-slider .slick-dots {
+  @apply absolute bottom-14;
+}
+
+.top-categories-slider .slick-dots li {
+  width: 10px;
+  height: 9.89px;
+  background: #fb2e86;
+  border-radius: 50px;
+  transform: rotate(-45deg);
+}
+
+/* .top-categories-slider .slick-dots .slick-active .top-categories-slider-custom {
+  @apply w-3 h-3 bg-red;
+} */

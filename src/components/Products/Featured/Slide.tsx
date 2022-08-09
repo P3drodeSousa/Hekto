@@ -1,11 +1,9 @@
 import ChairImg from "../../../assets/chair.png";
 import FeaturedProductMenu from "./Menu";
 
-type Props = {
-  img?: string;
-};
+type Props = {};
 
-const Slide = ({ img }: Props) => {
+const Slide = ({}: Props) => {
   return (
     <div className="mr-8 mb-28 flex flex-col product-slider-featured relative cursor-pointer">
       <FeaturedProductMenu />
