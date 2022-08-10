@@ -62,7 +62,9 @@ const sliderSettings = {
   arrows: false,
   adaptiveHeight: true,
   appendDots: (dots: boolean | undefined) => <ul>{dots}</ul>,
-  customPaging: (i: number) => <div className="home-slider-custom"></div>,
+  customPaging: (i: number) => (
+    <div className="top-categories-slider-custom"></div>
+  ),
   responsive: [
     {
       breakpoint: 1024,

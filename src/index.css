@@ -254,17 +254,17 @@
 
 /* Custom dots Home Slider  */
 .top-categories-slider .slick-dots {
-  @apply absolute bottom-14;
+  @apply absolute bottom-14 rounded-full;
 }
 
 .top-categories-slider .slick-dots li {
-  width: 10px;
-  height: 9.89px;
-  background: #fb2e86;
-  border-radius: 50px;
-  transform: rotate(-45deg);
+  background: transparent;
 }
 
-/* .top-categories-slider .slick-dots .slick-active .top-categories-slider-custom {
+.top-categories-slider-custom {
+  @apply w-3 h-3  border-solid border-2 border-red rounded-full;
+}
+
+.top-categories-slider .slick-dots .slick-active .top-categories-slider-custom {
   @apply w-3 h-3 bg-red;
-} */
+}
