@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Box shadow div */
+.div-shadow {
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}
+
 /* Sub Header */
 .full-bleed-header {
   box-shadow: 0 0 0 100vmax rgb(126 51 224);
@@ -267,4 +272,9 @@
 
 .top-categories-slider .slick-dots .slick-active .top-categories-slider-custom {
   @apply w-3 h-3 bg-red;
+}
+
+/* Blog Cards Home Page */
+.home-blog-container:hover {
+  @apply text-pink cursor-pointer;
 }

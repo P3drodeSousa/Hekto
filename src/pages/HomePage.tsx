@@ -8,6 +8,9 @@ import TrendingProducts from "../components/Products/Trending";
 import HomeSlider from "../components/Home/Slider";
 import Dicount from "../components/Products/Discount";
 import TopCategories from "../components/Products/TopCategories";
+import Banner from "../components/Home/Banner";
+import BlogSection from "../components/Home/Blog";
+import FooterComponent from "../components/Layout/Footer";
 
 function HomePage() {
   return (
@@ -22,9 +25,9 @@ function HomePage() {
       <TrendingProducts />
       {/* <Dicount /> */}
       <TopCategories />
-      <div className="flex justify-center items-center bg-yellow-200 h-96">
-        <h1 className="text-3xl font-bold text-pink ">Hello world !</h1>
-      </div>
+      <Banner />
+      <BlogSection />
+      <FooterComponent />
     </div>
   );
 }

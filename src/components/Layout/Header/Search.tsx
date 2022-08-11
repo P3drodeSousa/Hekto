@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchComponent() {
   return (
-    <div className="flex  rounded">
+    <div className="flex rounded">
       <input
         type="text"
         className="px-4 py-2 w-56 border-2 border-r-0"

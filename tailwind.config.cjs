@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       height: {
         homeSlider: "764px",
+        homeBanner: "462px",
       },
       leading: {
         homeSlider: "82px",
@@ -32,6 +33,8 @@ module.exports = {
         trendingshowcase: "#F5F6F8",
         trendingShowcaseBox: "#FFF6FB",
         homeSliderPara: "#8A8FB9",
+        blogCardPara: "#72718F",
+        footer: "#E7E4F8",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
