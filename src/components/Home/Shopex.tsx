@@ -32,24 +32,26 @@ const shopex = [
 
 const Shopex = (props: Props) => {
   return (
-    <LayoutComponent>
-      <Title title=" What Shopex Offer!" />
-      <div className=" grid shopex gap-7 h-80 mb-44">
-        {shopex.map(({ title, img, text }) => {
-          return (
-            <div key={title}>
-              <img src={img} alt={title} />
-              <h3 className="font-josefin font-semibold text-xl text-navyblue mt-7 mb-5">
-                {title}
-              </h3>
-              <p className="text-center mx-5 font-lato font-bold text-base leading-7 text-shonex">
-                {text}
-              </p>
-            </div>
-          );
-        })}
-      </div>
-    </LayoutComponent>
+    <section className="mt-16">
+      <LayoutComponent>
+        <Title title=" What Shopex Offer!" />
+        <div className=" grid shopex gap-7 h-80 mb-44 mt-14">
+          {shopex.map(({ title, img, text }) => {
+            return (
+              <div key={title}>
+                <img src={img} alt={title} />
+                <h3 className="font-josefin font-semibold text-xl text-navyblue mt-7 mb-5">
+                  {title}
+                </h3>
+                <p className="text-center mx-5 font-lato font-bold text-base leading-7 text-shonex">
+                  {text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </LayoutComponent>
+    </section>
   );
 };
 

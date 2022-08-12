@@ -27,11 +27,10 @@ const LatestProduct = ({ product }: Props) => {
             />
           </svg>
         </div>
-
         <div className="w-full h-full grid place-items-center">
           <img src={exampleChair} alt={`slide${exampleChair}`} />
         </div>
-
+        {/*   //FIXME ADD ICONS */}
         <div className="latest-product-hover relative">
           <div className="flex flex-col absolute bottom-4 left-5 gap-3">
             <div className="rounded-full hover:bg-featuredCard grid place-items-center h-8 w-8">

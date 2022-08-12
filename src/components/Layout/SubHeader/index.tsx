@@ -9,8 +9,8 @@ type Props = {};
 const SubHeaderComponent = (props: Props) => {
   return (
     <LayoutComponent>
-      <header className="w-full  bg-purple h-11 text-white full-bleed-header ">
-        <div className="h-full flex flex-col md:flex-row justify-between items-center font-semibold">
+      <header className="w-full  bg-purple h-auto text-white full-bleed-header py-3 ">
+        <div className="h-full flex justify-between flex-wrap items-center font-semibold ">
           <InfosComponent />
           <UserComponent />
         </div>

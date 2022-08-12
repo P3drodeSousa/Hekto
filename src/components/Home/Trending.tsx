@@ -7,7 +7,7 @@ type Props = {};
 const Trending = (props: Props) => {
   return (
     <LayoutComponent>
-      <div className="trending w-full bg-trending flex items-center justify-center full-bleed gap-20">
+      <div className="trending w-full bg-trending flex flex-col lg:flex-row items-center justify-center full-bleed gap-20 lg:py:0 py-10">
         <div className="trending-sofa">
           <img src={trending} alt="trending" />
         </div>

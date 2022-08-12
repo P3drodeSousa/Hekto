@@ -13,7 +13,7 @@ const HeaderComponent = () => {
   }, []);
 
   return (
-    <header className="h-20 flex items-center md:p-0 p-2 justify-between max-w-7xl w-full mx-auto ">
+    <header className="h-20 flex items-center lg:p-0 p-2 justify-between max-w-7xl w-full mx-auto ">
       <Link to="/">
         <svg
           width="94"
@@ -35,8 +35,6 @@ const HeaderComponent = () => {
         <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
       </div>
 
-      <Mobile ref={menuRef} menus={links} />
-
       <nav className="lg:block hidden">
         {links.map((link) => {
           return (
@@ -49,8 +47,8 @@ const HeaderComponent = () => {
           );
         })}
       </nav>
-
-      {/* <SearchComponent /> */}
+      <SearchComponent />
+      <Mobile ref={menuRef} menus={links} />
     </header>
   );
 };

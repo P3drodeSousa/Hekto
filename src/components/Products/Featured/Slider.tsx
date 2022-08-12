@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slide from "./Slide";
 import { sliderSettings } from "../../utils/sliderSettings";
+import ChairImg from "../../../assets/chair.png";
 
 type Props = {};
 
@@ -53,10 +54,10 @@ const slides = [
 
 const FeaturedSlider = (props: Props) => {
   return (
-    <div className="relative">
+    <div className="relative featured-slider mt-11">
       <Slider {...sliderSettings}>
         {slides.map((slide, index) => {
-          return <Slide key={index} img={slide.img} />;
+          return <Slide key={index} img={ChairImg} />;
         })}
       </Slider>
     </div>

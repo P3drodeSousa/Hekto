@@ -1,15 +1,16 @@
-import ChairImg from "../../../assets/chair.png";
 import FeaturedProductMenu from "./Menu";
 
-type Props = {};
+type Props = {
+  img: string;
+};
 
-const Slide = ({}: Props) => {
+const Slide = ({ img }: Props) => {
   return (
-    <div className="mr-8 mb-28 flex flex-col product-slider-featured relative cursor-pointer">
+    <div className="mb-28 mt-11 flex flex-col product-slider-featured relative cursor-pointer">
       <FeaturedProductMenu />
 
       <div className="bg-gray h-64 grid place-items-center">
-        <img src={ChairImg} alt={`slide${ChairImg}`} />
+        <img src={img} alt={`slide${img}`} />
         <button className="product-slider-featured-details-btn">
           View Details
         </button>

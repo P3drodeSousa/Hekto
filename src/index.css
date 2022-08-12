@@ -71,8 +71,9 @@
 
 /* Product Featured Slider */
 
-.product-slider-featured {
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+.featured-slider .slick-slide > div {
+  margin: 0 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-slider-featured-span {
@@ -81,6 +82,10 @@
 
 .product-slider-featured:hover {
   @apply bg-blue;
+}
+
+.product-slider-featured:hover img {
+  transform: scale(90%);
 }
 .product-slider-featured:hover .product-slider-featured-span,
 .product-slider-featured:hover h2 {
@@ -93,7 +98,7 @@
 }
 
 .product-slider-featured-details-btn {
-  @apply w-28 h-8 bg-featuredDetails text-white text-sm cursor-pointer font-josefin rounded-sm;
+  @apply w-32 h-10 bg-featuredDetails text-white text-sm cursor-pointer font-josefin rounded-sm;
 }
 
 .product-slider-featured:hover .product-slider-featured-menu {
@@ -136,7 +141,7 @@
 }
 
 .latest-product:hover .latest-product-hover {
-  display: block;
+  display: flex;
 }
 
 .latest-product:hover .latest-product-hover svg {
@@ -153,13 +158,15 @@
 
 .shopex div {
   @apply flex flex-col items-center justify-center;
+  min-height: 320px;
   box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
 }
 
 /* Trending */
 
 .trending {
-  height: 579px;
+  min-height: 580px;
+  height: auto;
 }
 
 .full-bleed {
@@ -277,4 +284,15 @@
 /* Blog Cards Home Page */
 .home-blog-container:hover {
   @apply text-pink cursor-pointer;
+}
+
+/* Login Page */
+
+.full-bleed-login {
+  box-shadow: 0 0 0 100vmax #f6f5ff;
+  clip-path: inset(0 -100vmax);
+}
+
+.user-form-shadow {
+  box-shadow: 0px 0px 25px 10px #f8f8fb;
 }

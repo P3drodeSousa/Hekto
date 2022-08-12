@@ -1,10 +1,16 @@
-import { forwardRef, useCallback, useImperativeHandle, useState } from "react";
+import React, {
+  forwardRef,
+  useCallback,
+  useImperativeHandle,
+  useState,
+} from "react";
+import { Link } from "react-router-dom";
 
-type Props = {};
+type Props = {
+  menus: string[];
+};
 
-// TODO ADD MENU ITEMS
-
-const Mobile = ({ menus }, ref) => {
+const Mobile = ({ menus }: Props, ref) => {
   const [visible, setVisible] = useState(false);
 
   const closeMenu = useCallback(() => {
@@ -26,11 +32,8 @@ const Mobile = ({ menus }, ref) => {
   if (!visible) return null;
 
   return (
-    <section className="h-screen w-screen bg-white fixed inset-0  flex flex-col items-center justify-between z-50">
-      <div
-        className="absolute top-0 right-0 px-8 py-8"
-        onClick={() => closeMenu()}
-      >
+    <section className="h-screen w-screen bg-white fixed inset-0 z-50 px-16 py-16">
+      <div className="absolute top-16 right-16 " onClick={() => closeMenu()}>
         <svg
           className="h-8 w-8 text-black"
           viewBox="0 0 24 24"
@@ -44,7 +47,15 @@ const Mobile = ({ menus }, ref) => {
           <line x1="6" y1="6" x2="18" y2="18" />
         </svg>
       </div>
-      <h1>Mobile Menu</h1>
+      <div className="flex flex-col items-center justify-evenly h-full">
+        {menus.map((link: string) => {
+          return (
+            <Link to={link} className="mr-6 font-lato text-3xl">
+              {link}
+            </Link>
+          );
+        })}
+      </div>
     </section>
   );
 };

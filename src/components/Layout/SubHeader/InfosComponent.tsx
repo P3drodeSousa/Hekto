@@ -1,6 +1,6 @@
 export default function InfosComponent() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-between">
       <div className="flex items-center">
         <svg
           className="mr-3"
@@ -17,7 +17,7 @@ export default function InfosComponent() {
         </svg>
         <span>mhhasanul@gmail.com</span>
       </div>
-      <div className="flex items-center ml-14">
+      <div className="flex items-center  ml-7 lg:ml-14">
         <svg
           className="mr-3"
           width="16"

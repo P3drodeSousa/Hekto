@@ -6,7 +6,7 @@ import Reduction from "../../utils/Reduction";
 
 const TrendingShowcase = (props: Props) => {
   return (
-    <div className="trending-showcase">
+    <div className="trending-showcase mt-10">
       <div className="trending-showcase-container flex flex-col items-center px-2 pt-2">
         <div className="trending-showcase-image flex-1 w-full bg-trendingshowcase grid place-content-center">
           <img src={chair} alt="" />

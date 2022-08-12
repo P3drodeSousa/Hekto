@@ -3,6 +3,12 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      transformOrigin: {
+        0: "0%",
+      },
+      zIndex: {
+        "-1": "-1",
+      },
       height: {
         homeSlider: "764px",
         homeBanner: "462px",
@@ -35,6 +41,10 @@ module.exports = {
         homeSliderPara: "#8A8FB9",
         blogCardPara: "#72718F",
         footer: "#E7E4F8",
+        pageBanner: "#F6F5FF",
+        pageBannerTitle: "#101750",
+        pageFormPar: "#9096B2",
+        formborder: "#C2C5E1",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],

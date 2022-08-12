@@ -22,7 +22,7 @@ const HomeSlider = (props: Props) => {
   };
   return (
     <section>
-      <Slider {...settings} className="home-slider relative">
+      <Slider {...settings} className="home-slider relative mb-32">
         <Slide color="#F2F0FF" />
         <Slide color="#bc5090" />
         <Slide color="#ef5675" />

@@ -10,7 +10,7 @@ const ArticleCard = ({ author, title, description, img, date }: Props) => {
   return (
     <div className="flex-1 flex flex-col div-shadow text-navyblue rounded-md font-josefin home-blog-container">
       <div className="flex-1">
-        <img src={img} alt="" className="rounded-lg" />
+        <img src={img} alt="" className="rounded-lg h-full w-full" />
       </div>
       <div className="flex-1 p-5 pb-10 ">
         <div className="flex mb-8 home-blog-infos">

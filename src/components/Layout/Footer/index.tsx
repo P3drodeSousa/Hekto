@@ -10,7 +10,7 @@ const FooterComponent = (props: Props) => {
   return (
     <footer className="w-full  bg-featuredCard text-homeSliderPara font-lato">
       <LayoutComponent>
-        <div className="flex  pt-24 pb-36 gap-24">
+        <div className="flex flex-col md:flex-row pt-24 pb-36 gap-24">
           <div className="flex-3">
             <h3 className="text-4xl leading-10 font-josefin font-bold mb-8 text-black">
               Hekto

@@ -13,14 +13,14 @@ const randomName = faker.name.findName();
 const Slide = ({ color }: Props) => {
   return (
     <div
-      className="h-homeSlider w-screen relative  px-40 flex items-center"
+      className="h-homeSlider w-screen relative px-6 lg:px-40 flex items-center"
       style={{ backgroundColor: `${color}` }}
     >
-      <div className="absolute left-56 top-0">
+      <div className="absolute hidden lg:block left-56 top-0">
         <img src={homeslider} alt="" />
       </div>
 
-      <div className="ml-96 flex-1 ">
+      <div className=" ml:3 lg:ml-96 flex-1 ">
         <p className="text-pink font-lato font-bold text-base leading-7 mb-6">
           Best Furniture For Your Castle....
         </p>
@@ -34,7 +34,7 @@ const Slide = ({ color }: Props) => {
         <Button text="Shop Now" />
       </div>
 
-      <div className="h-full grid place-items-center flex-1 home-slider relative">
+      <div className="h-full hidden lg:grid place-items-center flex-1 home-slider relative ">
         <img src={promoSofa} alt="" />
         <div className="promo grid place-items-center">
           <span className="font-josefin text-4xl text-white  p-4 text-center">

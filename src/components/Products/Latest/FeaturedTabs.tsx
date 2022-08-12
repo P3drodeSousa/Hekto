@@ -37,7 +37,7 @@ function FeaturedTabs({}: Props) {
   const { component: Component } = tabs.find((x) => x.id === selectedTab);
 
   return (
-    <div className="latest-tabs flex items-center flex-col ">
+    <div className="latest-tabs flex items-center flex-col mt-5 ">
       <nav className="tabs-nav mb-14">
         {tabs.map((tab) => (
           <button
