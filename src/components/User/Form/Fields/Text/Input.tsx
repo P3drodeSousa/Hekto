@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import { UseFormReturn } from "react-hook-form";
 
 interface IReactHookFormTextFieldProps {
@@ -22,7 +22,9 @@ const Input = memo(
         id={name}
         {...methods.register(name)}
         type={type}
-        className="w-full  pt-6 pb-4 px-4 placeholder-transparent text-black  border-2 border-formborder peer focus:outline-pink focus:text-black rounded-sm"
+        className={`w-full  pt-6 pb-4 px-4 placeholder-transparent text-black  border-2 ${
+          methods.formState.errors[name] ? "border-red" : "border-formborder"
+        } peer focus:outline-pink focus:text-black rounded-sm`}
         placeholder={placeholder}
       />
       <label
@@ -31,6 +33,11 @@ const Input = memo(
       >
         {label}
       </label>
+      {methods.formState.errors[name] && (
+        <span className="text-red font-medium text-sm">
+          {methods.formState.errors[name].message}
+        </span>
+      )}
     </div>
   ),
   (prevProps, nextProps) => {

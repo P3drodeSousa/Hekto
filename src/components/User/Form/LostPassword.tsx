@@ -12,6 +12,7 @@ const LostPasswordForm = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
+
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
@@ -19,6 +20,7 @@ const LostPasswordForm = () => {
       <div className="relative mb-6 text-base">
         <input
           {...register("email", { required: true })}
+          type="email"
           className="w-full  pt-6 pb-4 px-4 placeholder-transparent text-black  border-2 border-formborder peer focus:outline-pink focus:text-black rounded-sm"
           placeholder="email"
         />

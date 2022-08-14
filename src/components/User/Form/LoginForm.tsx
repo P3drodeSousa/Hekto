@@ -1,13 +1,22 @@
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 import { Link } from "react-router-dom";
 import Submit from "./Fields/Submit";
 import { TextInputContainer } from "./Fields/Text/InputContainer";
+import { useYupValidationResolver } from "./utils/useYupValidationresolver";
+import { signInValidationSchema } from "./utils/validationSchemas";
+
+type FormValues = {
+  email: string;
+  password: string;
+};
 
 type Props = {};
 
 const LoginForm = (props: Props) => {
-  const methods = useForm();
-  const onSubmit = (data: any) => console.log(data);
+  const resolver = useYupValidationResolver(signInValidationSchema);
+  const methods = useForm<FormValues>({ resolver, mode: "onBlur" });
+  const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
+
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
@@ -19,7 +28,7 @@ const LoginForm = (props: Props) => {
         />
         <TextInputContainer
           label="Password"
-          name="Password"
+          name="password"
           placeholder="password"
           type="password"
         />
