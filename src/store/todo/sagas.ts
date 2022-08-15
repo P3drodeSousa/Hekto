@@ -11,7 +11,7 @@ const getTodos = () =>
 /*
   Worker Saga: Fired on FETCH_TODO_REQUEST action
 */
-function* fetchTodoSaga() {
+function* fetchTodoSaga(): any {
   try {
     const response = yield call(getTodos);
     yield put(
@@ -19,7 +19,7 @@ function* fetchTodoSaga() {
         todos: response.data,
       })
     );
-  } catch (e) {
+  } catch (e: any) {
     yield put(
       fetchTodoFailure({
         error: e.message,
