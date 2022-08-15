@@ -1,13 +1,14 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Submit from "./Fields/Submit";
 import { TextInputContainer } from "./Fields/Text/InputContainer";
-import { useYupValidationResolver } from "./utils/useYupValidationresolver";
+
 import { signUpValidationSchema } from "./utils/validationSchemas";
 
 type Props = {};
 
 const SignupForm = (props: Props) => {
-  const resolver = useYupValidationResolver(signUpValidationSchema);
+  const resolver = yupResolver(signUpValidationSchema);
   const methods = useForm({ resolver });
 
   const onSubmit = (data: any) => console.log(data);

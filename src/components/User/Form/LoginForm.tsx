@@ -2,8 +2,10 @@ import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 import { Link } from "react-router-dom";
 import Submit from "./Fields/Submit";
 import { TextInputContainer } from "./Fields/Text/InputContainer";
-import { useYupValidationResolver } from "./utils/useYupValidationresolver";
+
 import { signInValidationSchema } from "./utils/validationSchemas";
+
+import { yupResolver } from "@hookform/resolvers/yup";
 
 type FormValues = {
   email: string;
@@ -13,7 +15,7 @@ type FormValues = {
 type Props = {};
 
 const LoginForm = (props: Props) => {
-  const resolver = useYupValidationResolver(signInValidationSchema);
+  const resolver = yupResolver(signInValidationSchema);
   const methods = useForm<FormValues>({ resolver, mode: "onBlur" });
   const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
 

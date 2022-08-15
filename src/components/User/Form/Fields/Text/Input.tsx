@@ -1,8 +1,6 @@
 import { memo } from "react";
 import { UseFormReturn } from "react-hook-form";
 
-// FIXME ERROR MESSAGE TS ERROR
-
 interface IReactHookFormTextFieldProps {
   methods: UseFormReturn;
   label: string;
@@ -37,7 +35,7 @@ const Input = memo(
       </label>
       {methods.formState.errors[name] && (
         <span className="text-red font-medium text-sm">
-          {methods.formState.errors[name].message}
+          {!!methods.formState.errors[name]?.message ?? ""}
         </span>
       )}
     </div>
