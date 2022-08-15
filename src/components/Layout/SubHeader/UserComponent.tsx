@@ -7,7 +7,7 @@ type Props = {};
 const UserComponent = (props: Props) => {
   return (
     <div className="flex item-center mt-2 md:mt-0">
-      <Link to="/login" className="flex item-center justify-center mr-4">
+      <Link to="/user/login" className="flex item-center justify-center mr-4">
         Login
         <svg
           width="16"

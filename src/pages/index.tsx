@@ -17,7 +17,7 @@ export default function index() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           {/* User Routes */}
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/user/login" element={<LoginPage />} />
           <Route path="/register" element={<SignUpPage />} />
           <Route path="/lost_password" element={<LostPasswordPage />} />
           {/* Not Found */}

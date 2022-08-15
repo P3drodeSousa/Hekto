@@ -1,8 +1,19 @@
+import { useLocation } from "react-router-dom";
 import LayoutComponent from "..";
 
-type Props = { children?: JSX.Element | JSX.Element[]; title: string };
+type Props = { children: JSX.Element | JSX.Element[]; title: string };
 
 const PageLayout = ({ title, children }: Props) => {
+  const location = useLocation();
+
+  const formatPath = () => {
+    const path = location.pathname;
+    const pathArr = path.split("/");
+    return console.log(pathArr);
+  };
+
+  console.log(formatPath());
+
   return (
     <LayoutComponent>
       <div className="h-72 bg-pageBanner flex flex-col justify-center full-bleed-login">

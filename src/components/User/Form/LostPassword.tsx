@@ -1,5 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import Submit from "./Fields/Submit";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { lostPasswordValidationSchema } from "./utils/validationSchemas";
 
 type Inputs = {
   email: string;
@@ -9,9 +11,8 @@ const LostPasswordForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({ resolver: yupResolver(lostPasswordValidationSchema) });
 
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
