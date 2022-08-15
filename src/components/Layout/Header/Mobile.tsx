@@ -10,7 +10,11 @@ type Props = {
   menus: string[];
 };
 
-const Mobile = ({ menus }: Props, ref) => {
+interface MyRef {
+  openMenu(): void;
+}
+
+const Mobile = React.forwardRef<MyRef, Props>(({ menus }, ref) => {
   const [visible, setVisible] = useState(false);
 
   const closeMenu = useCallback(() => {
@@ -58,6 +62,6 @@ const Mobile = ({ menus }: Props, ref) => {
       </div>
     </section>
   );
-};
+});
 
-export default forwardRef(Mobile);
+export default Mobile;

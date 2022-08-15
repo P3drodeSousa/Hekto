@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import LayoutComponent from "..";
 
-type Props = { children: JSX.Element | JSX.Element[]; title: string };
+type Props = { children?: JSX.Element | JSX.Element[]; title: string };
 
 const PageLayout = ({ title, children }: Props) => {
   const location = useLocation();
@@ -21,7 +21,7 @@ const PageLayout = ({ title, children }: Props) => {
           {title}
         </h2>
       </div>
-      {children}
+      <div>{children}</div>
     </LayoutComponent>
   );
 };

@@ -7,6 +7,7 @@ import LoginPage from "./User/Login";
 import NotFound from "./NotFound";
 import LostPasswordPage from "./User/LostPassword";
 import SignUpPage from "./User/SignUp";
+import TestPage from "./test";
 
 export default function index() {
   return (
@@ -20,6 +21,8 @@ export default function index() {
           <Route path="/user/login" element={<LoginPage />} />
           <Route path="/register" element={<SignUpPage />} />
           <Route path="/lost_password" element={<LostPasswordPage />} />
+          {/* TEST PAGE */}
+          <Route path="/test" element={<TestPage />} />
           {/* Not Found */}
           <Route path="*" element={<NotFound />} />
         </Routes>

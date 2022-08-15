@@ -34,7 +34,7 @@ const tabs = [
 
 function FeaturedTabs({}: Props) {
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
-  const { component: Component } = tabs.find((x) => x.id === selectedTab);
+  const { component: Component }: any = tabs.find((x) => x.id === selectedTab);
 
   return (
     <div className="latest-tabs flex items-center flex-col mt-5 ">

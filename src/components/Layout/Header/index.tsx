@@ -1,15 +1,19 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Mobile from "./Mobile";
 import SearchComponent from "./Search";
 
+interface MyRef {
+  openMenu(): void;
+}
+
 const links: string[] = ["Home", "Shop", "Contact"];
 
 const HeaderComponent = () => {
-  const menuRef = useRef(null);
+  const menuRef = useRef<MyRef>(null);
 
   const handleOpenMenu = useCallback(() => {
-    menuRef.current.openMenu();
+    menuRef.current?.openMenu();
   }, []);
 
   return (
